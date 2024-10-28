@@ -7,13 +7,15 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
     androidTarget {
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "11"
+            }
         }
     }
     
@@ -33,16 +35,45 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.coil.compose)
+            implementation(libs.kotlinx.coroutines.android)
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation("io.insert-koin:koin-core")
+            implementation("io.insert-koin:koin-android")
+            implementation(libs.accompanist.systemuicontroller)
         }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
+            api(compose.animation)
+            api(compose.materialIconsExtended)
+            api(libs.moe.precompose)
+            api(libs.moe.precompose.viewmodel)
+            implementation(compose.material3)
+
             implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation("io.insert-koin:koin-core")
+            implementation("io.insert-koin:koin-compose")
+            api(libs.moe.precompose.koin)
+
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.serialization)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.ktor.content.negotiation)
+        }
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
@@ -77,4 +108,3 @@ android {
 dependencies {
     debugImplementation(compose.uiTooling)
 }
-
