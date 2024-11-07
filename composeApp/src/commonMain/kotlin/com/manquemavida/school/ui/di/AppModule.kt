@@ -10,7 +10,6 @@ import org.koin.dsl.module
 @OptIn(ExperimentalSerializationApi::class)
 fun AppModule() = module {
 
-
     single<HttpClient> {
         HttpClient {
             install(ContentNegotiation) {

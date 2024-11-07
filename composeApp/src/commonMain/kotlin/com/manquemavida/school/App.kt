@@ -1,7 +1,7 @@
 package com.manquemavida.school
 
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import com.manquemavida.school.navigation.NavController
 import data.cache.ConfigDevice
 import data.cache.SessionCache
 import moe.tlaster.precompose.PreComposeApp
@@ -18,7 +18,7 @@ fun App(
         KoinContext {
             AppTheme {
                 SessionCache.configDevice = configDevice
-                Text("aoihdqoi")
+                NavController()
             }
         }
     }
