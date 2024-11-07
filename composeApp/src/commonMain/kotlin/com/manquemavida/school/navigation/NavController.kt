@@ -24,7 +24,7 @@ fun NavController(){
         scene(
             route = startDestination,
             content = {
-                navLogin(
+                navLoginScreen(
                     navGo = navGo,
                     colors = colors
                 )

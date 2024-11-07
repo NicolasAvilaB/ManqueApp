@@ -36,7 +36,6 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
-            implementation(libs.coil.compose)
             implementation(libs.kotlinx.coroutines.android)
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation("io.insert-koin:koin-core")
@@ -52,6 +51,8 @@ kotlin {
             api(libs.moe.precompose)
             api(libs.moe.precompose.viewmodel)
             implementation(compose.material3)
+            implementation(libs.coil3)
+            implementation(libs.coil3.network.ktor)
 
             implementation(compose.material)
             implementation(compose.ui)

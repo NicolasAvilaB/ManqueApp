@@ -1,4 +1,4 @@
-package com.manquemavida.school.ui.screens.loginscreen
+package com.manquemavida.school.ui.screens.login
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -10,5 +10,5 @@ internal fun LoginScreen(
     navGo: NavGo,
     colors: DarkModeColors
 ) {
-    Text("eifjwe")
+    Text("Hola Manquemávida")
 }

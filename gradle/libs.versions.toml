@@ -16,7 +16,8 @@ junit = "4.13.2"
 kotlin = "2.0.21"
 accompanistSystemUiController = "0.36.0"
 kotlinSerialization = "1.9.24"
-coil3Version = "3.0.0-alpha06"
+coil3Version = "3.0.1"
+coil3NetworkVersion = "3.0.0-alpha06"
 coilCompose = "2.7.0"
 koinBomVersion = "4.0.0"
 moePrecomposeVersion = "1.6.2"
@@ -25,7 +26,7 @@ coroutines = "1.7.3"
 
 [libraries]
 coil3 = { group = "io.coil-kt.coil3", name= "coil-compose", version.ref = "coil3Version" }
-coil3-network-ktor = { group = "io.coil-kt.coil3", name= "coil-network-ktor", version.ref = "coil3Version" }
+coil3-network-ktor = { group = "io.coil-kt.coil3", name= "coil-network-ktor", version.ref = "coil3NetworkVersion" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 moe-precompose = { module = "moe.tlaster:precompose", version.ref = "moePrecomposeVersion" }
 moe-precompose-viewmodel = { module = "moe.tlaster:precompose-viewmodel", version.ref = "moePrecomposeVersion" }
