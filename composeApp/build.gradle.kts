@@ -33,6 +33,7 @@ kotlin {
     sourceSets {
         
         androidMain.dependencies {
+            implementation(project(":shared"))
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
@@ -44,6 +45,7 @@ kotlin {
         }
 
         commonMain.dependencies {
+            implementation(project(":shared"))
             implementation(compose.runtime)
             implementation(compose.foundation)
             api(compose.animation)
@@ -51,8 +53,6 @@ kotlin {
             api(libs.moe.precompose)
             api(libs.moe.precompose.viewmodel)
             implementation(compose.material3)
-            implementation(libs.coil3)
-            implementation(libs.coil3.network.ktor)
 
             implementation(compose.material)
             implementation(compose.ui)
@@ -74,6 +74,7 @@ kotlin {
         }
 
         iosMain.dependencies {
+            implementation(project(":shared"))
             implementation(libs.ktor.client.darwin)
         }
     }
@@ -108,4 +109,5 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    implementation(project(":shared"))
 }

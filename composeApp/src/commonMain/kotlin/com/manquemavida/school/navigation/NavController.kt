@@ -4,8 +4,10 @@ import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import imageview.ImageViewController
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator
+import org.koin.compose.koinInject
 import theme.getColorsTheme
 
 @Composable
@@ -15,6 +17,8 @@ fun NavController(){
     val startDestination: String = NavRoutes.LoginScreen.route
 
     val colors = getColorsTheme()
+
+    val imageViewController = koinInject<ImageViewController>()
 
     NavHost(
         modifier = Modifier.background(color = colors.background),
@@ -26,6 +30,7 @@ fun NavController(){
             content = {
                 navLoginScreen(
                     navGo = navGo,
+                    imageViewController = imageViewController,
                     colors = colors
                 )
             }
