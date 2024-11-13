@@ -7,7 +7,7 @@ import data.cache.SessionCache
 import moe.tlaster.precompose.PreComposeApp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.KoinContext
-import theme.AppTheme
+import theme.ManqueTheme
 
 @Composable
 @Preview
@@ -16,7 +16,7 @@ fun App(
 ) {
     PreComposeApp {
         KoinContext {
-            AppTheme {
+            ManqueTheme {
                 SessionCache.configDevice = configDevice
                 NavController()
             }

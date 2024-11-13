@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Input Text -->
+    <string name="app_name">ManqueApp</string>
+    <string name="label_email">Email</string>
+    <string name="placeholder_your_must_enter_email">Your must enter email...</string>
+    <string name="icon_email_screen">Email icon</string>
+
+    <string name="label_pass">Password</string>
+    <string name="placeholder_your_must_enter_password">Your must enter pass...</string>
+    <string name="icon_pass_screen">Password Icon</string>
+    <string name="icon_for_watch_pass_screen">Icon for watch pass</string>
+
+    <!-- Description Images -->
+    <string name="text_logo_drivin">Logo Manquemávida School</string>
+
+    <!-- Buttons -->
+    <string name="button_primary_description">Button primary action.</string>
+
+    <!-- Text Actions -->
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="accept">Accept</string>
+    <string name="enter">Entry</string>
+    <string name="login">Log in</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Retry</string>
+</resources>

@@ -1,4 +1,3 @@
-include(":shared")
 rootProject.name = "ManqueApp"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
@@ -30,5 +29,3 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-include(":shared:androidmain")
-include(":shared:iosmain")

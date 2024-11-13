@@ -33,7 +33,6 @@ kotlin {
     sourceSets {
         
         androidMain.dependencies {
-            implementation(project(":shared"))
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
@@ -45,7 +44,6 @@ kotlin {
         }
 
         commonMain.dependencies {
-            implementation(project(":shared"))
             implementation(compose.runtime)
             implementation(compose.foundation)
             api(compose.animation)
@@ -67,6 +65,9 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
 
+            implementation(libs.coil3)
+            implementation(libs.coil3.network.ktor)
+
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.serialization)
             implementation(libs.kotlinx.coroutines.core)
@@ -74,7 +75,6 @@ kotlin {
         }
 
         iosMain.dependencies {
-            implementation(project(":shared"))
             implementation(libs.ktor.client.darwin)
         }
     }
@@ -94,6 +94,7 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "**/shared/**"
         }
     }
     buildTypes {
@@ -109,5 +110,4 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
-    implementation(project(":shared"))
 }

@@ -7,8 +7,11 @@ data class DarkModeColors(
     val blueSea: Color,
     val redHead: Color,
     val colorExpenseItem: Color,
-    val background: Color,
-    val textColor: Color,
+    val buttonPrimaryColor: Color,
+    val iconColor: Color,
+    val errorTextColor: Color,
     val addIconColor: Color,
-    val colorArrowRound: Color
+    val colorArrowRound: Color,
+    val textColor: Color,
+    val background: Color
 )

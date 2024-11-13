@@ -1,3 +1,31 @@
 <resources>
+
+    <!-- Input Text -->
     <string name="app_name">ManqueApp</string>
+    <string name="label_email">Email</string>
+    <string name="placeholder_your_must_enter_email">Ingrese su email...</string>
+    <string name="icon_email_screen">Ícono de Email</string>
+
+    <string name="label_pass">Password</string>
+    <string name="placeholder_your_must_enter_password">Ingrese su clave...</string>
+    <string name="icon_pass_screen">Ícono de Password</string>
+    <string name="icon_for_watch_pass_screen">Ícono para ver su Clave</string>
+
+    <!-- Description Images -->
+    <string name="text_logo_drivin">Logo del Colegio Manquemávida</string>
+
+    <!-- Botones -->
+    <string name="button_primary_description">Botón de acción primaria.</string>
+
+    <!-- Text Actions -->
+    <string name="delete">Borrar</string>
+    <string name="save">Guardar</string>
+    <string name="back">Volver</string>
+    <string name="accept">Aceptar</string>
+    <string name="enter">Ingresar</string>
+    <string name="login">Ingresar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="search">Buscar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="retry">Reintentar</string>
 </resources>

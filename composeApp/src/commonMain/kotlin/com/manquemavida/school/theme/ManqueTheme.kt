@@ -8,7 +8,7 @@ import androidx.compose.ui.unit.dp
 import data.cache.SessionCache
 
 @Composable
-fun AppTheme(content: @Composable () -> Unit) {
+fun ManqueTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = MaterialTheme.colorScheme.copy(primary = Color.Black),
         shapes = MaterialTheme.shapes.copy(
@@ -31,6 +31,9 @@ fun getColorsTheme(): DarkModeColors {
     val colorExpenseItem = if (isDarkMode) Color(0xFF090808) else Color(0xFFF1F1F1)
     val backgroundColor = if (isDarkMode) Color(0xFF1E1C1C) else Color.White
     val textColor = if (isDarkMode) Color.White else Color.Black
+    val buttonPrimaryColor = if (isDarkMode) Color(0xFF91ABF8) else Color(0xFF2141A0)
+    val iconColor = if (isDarkMode) Color.LightGray else Color(0xFF424342)
+    val errorTextColor = Color.Red
     val addIconColor = if (isDarkMode) purple else Color.Black
     val colorArrowRound = if (isDarkMode) purple else Color.Gray.copy(alpha = 0.2f)
 
@@ -40,7 +43,10 @@ fun getColorsTheme(): DarkModeColors {
         colorExpenseItem = colorExpenseItem,
         background = backgroundColor,
         redHead = redHead,
+        buttonPrimaryColor = buttonPrimaryColor,
+        iconColor = iconColor,
         textColor = textColor,
+        errorTextColor = errorTextColor,
         addIconColor = addIconColor,
         colorArrowRound = colorArrowRound,
     )
