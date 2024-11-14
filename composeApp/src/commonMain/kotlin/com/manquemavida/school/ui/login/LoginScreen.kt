@@ -4,7 +4,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -15,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.drivin.android.ui.components.text.ManqueText14
 import com.drivin.android.ui.components.text.ManqueText16
@@ -42,19 +42,18 @@ internal fun LoginScreen(
     val errorPassMessage = ""
         Box(
             modifier = Modifier
-                    .fillMaxSize(),
+                .fillMaxSize()
+                .padding(PaddingSpaceAroundScreen),
             contentAlignment = Alignment.Center
         ) {
             Column(
-                modifier = Modifier.padding(bottom = 120.dp),
+                modifier = Modifier.padding(
+                    bottom = 120.dp
+                ),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 ImagesLoadLogo()
                 ManqueInputEmail(
-                    modifier = Modifier.padding(
-                        start = InputAroundPadding,
-                        end = InputAroundPadding
-                    ),
                     inputValue = inputValue,
                     errorInput = errorEmailInput,
                     errorMessage = errorEmailMessage,
@@ -64,10 +63,6 @@ internal fun LoginScreen(
                 )
 
                 ManqueInputPassword(
-                    modifier = Modifier.padding(
-                        start = InputAroundPadding,
-                        end = InputAroundPadding
-                    ),
                     passValue = passValue,
                     errorInput = errorPassInput,
                     errorMessage = errorPassMessage,
@@ -75,10 +70,17 @@ internal fun LoginScreen(
                         passValue.value = value
                     }
                 )
+                ManqueText16(
+                    modifier = Modifier
+                        .clickable { navGo.forgotPasswordScreen.invoke() }
+                        .padding(10.dp),
+                    text = "¿Olvidaste tu Contraseña?",
+                    textDecoration = TextDecoration.Underline
+                )
                 ManquePrimaryButton(
                     modifier = Modifier
-                        .padding(top = 30.dp)
-                        .width(150.dp)
+                        .padding(top = 10.dp)
+                        .width(200.dp)
                         .height(60.dp),
                     textContent = stringResource(Res.string.login),
                     onClick = { }
@@ -86,17 +88,17 @@ internal fun LoginScreen(
             }
             Column(
                 modifier = Modifier
-                    .clickable {  }
-                    .fillMaxSize()
-                    .padding(bottom = 16.dp),
+                    .fillMaxSize(),
                 verticalArrangement = Arrangement.Bottom,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 ManqueText14(
+                    modifier = Modifier.clickable {  },
                     text = "Copyright © 2024 | Nicolás Ávila B",
                     fontWeight = FontWeight.Bold,
                 )
                 ManqueText14(
+                    modifier = Modifier.clickable {  },
                     text = "para Fundación Manquemávida ",
                     fontWeight = FontWeight.Bold,
                 )
@@ -104,4 +106,4 @@ internal fun LoginScreen(
         }
 }
 
-private val InputAroundPadding = 10.dp
+private val PaddingSpaceAroundScreen = 14.dp

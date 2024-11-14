@@ -30,5 +30,14 @@ fun NavController(){
                 )
             }
         )
+        scene(
+            route = NavRoutes.ForgotPasswordScreen.route,
+            content = { backStackEntry ->
+                navForgotPassScreen(
+                    colors = colors,
+                    navGo = navGo
+                )
+            }
+        )
     }
 }

@@ -3,7 +3,7 @@
     <!-- Input Text -->
     <string name="app_name">ManqueApp</string>
     <string name="label_email">Email</string>
-    <string name="placeholder_your_must_enter_email">Your must enter email...</string>
+    <string name="placeholder_your_must_enter_email">Your must enter email/rut...</string>
     <string name="icon_email_screen">Email icon</string>
 
     <string name="label_pass">Password</string>
@@ -20,6 +20,7 @@
     <!-- Text Actions -->
     <string name="delete">Delete</string>
     <string name="save">Save</string>
+    <string name="continues">Continue</string>
     <string name="back">Back</string>
     <string name="accept">Accept</string>
     <string name="enter">Entry</string>
