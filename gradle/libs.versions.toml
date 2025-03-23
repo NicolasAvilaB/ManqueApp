@@ -1,19 +1,19 @@
 [versions]
-agp = "8.5.2"
-android-compileSdk = "34"
+agp = "8.7.3"
+android-compileSdk = "35"
 android-minSdk = "24"
-android-targetSdk = "34"
-androidx-activityCompose = "1.9.3"
+android-targetSdk = "35"
+androidx-activityCompose = "1.10.1"
 androidx-appcompat = "1.7.0"
-androidx-constraintlayout = "2.1.4"
-androidx-core-ktx = "1.13.1"
+androidx-constraintlayout = "2.2.1"
+androidx-core-ktx = "1.15.0"
 androidx-espresso-core = "3.6.1"
-androidx-lifecycle = "2.8.3"
+androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
-compose-multiplatform = "1.7.0"
+compose-multiplatform = "1.7.3"
 junit = "4.13.2"
-kotlin = "2.0.21"
+kotlin = "2.1.20"
 accompanistSystemUiController = "0.36.0"
 kotlinSerialization = "1.9.24"
 coil3Version = "3.0.1"
@@ -22,13 +22,14 @@ coilCompose = "2.7.0"
 koinBomVersion = "4.0.0"
 moePrecomposeVersion = "1.6.2"
 ktor = "2.3.12"
-coroutines = "1.7.3"
+coroutines = "1.9.0"
 
 [libraries]
 coil3 = { group = "io.coil-kt.coil3", name= "coil-compose", version.ref = "coil3Version" }
 coil3-network-ktor = { group = "io.coil-kt.coil3", name= "coil-network-ktor", version.ref = "coil3NetworkVersion" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 moe-precompose = { module = "moe.tlaster:precompose", version.ref = "moePrecomposeVersion" }
+moe-precompose-molecule = { module = "moe.tlaster:precompose-molecule", version.ref = "moePrecomposeVersion" }
 moe-precompose-viewmodel = { module = "moe.tlaster:precompose-viewmodel", version.ref = "moePrecomposeVersion" }
 moe-precompose-koin = { module = "moe.tlaster:precompose-koin", version.ref = "moePrecomposeVersion" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemUiController" }

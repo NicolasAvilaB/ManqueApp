@@ -49,6 +49,7 @@ kotlin {
             api(compose.animation)
             api(compose.materialIconsExtended)
             api(libs.moe.precompose)
+            api(libs.moe.precompose.molecule)
             api(libs.moe.precompose.viewmodel)
             implementation(compose.material3)
 
